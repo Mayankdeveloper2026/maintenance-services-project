@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Home.css">
+<title>Mall & Home Utility Services</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Header -->
+<header class="bg-dark text-white py-3 sticky-top">
+    <div class="container">
+
+        <h1 class="mb-3">Mall & Home Utility Services</h1>
+
+        <input
+            type="text"
+            id="headerSearch"
+            class="form-control mb-3"
+            placeholder="Search for services..."
+        >
+
+        <div id="navigation">
+
+    <a href="index.html" class="text-white me-3 text-decoration-none">
+        Home
+    </a>
+
+    <a href="booking.html" class="text-white me-3 text-decoration-none">
+        Booking
+    </a>
+
+    <a href="dashboard.html" class="text-white me-3 text-decoration-none">
+        Dashboard
+    </a>
+
+    <a href="providers.html" class="text-white text-decoration-none">
+        Providers
+    </a>
+
+</div>
+
+    </div>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">
+🏠 Home Utility Services
+</a>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+<div class="hero-content">
+<h1>Mall & Home Utility Services</h1>
+<p>Trusted Professionals For Every Home Need</p>
+<a href="#services" class="btn btn-primary btn-lg mt-3">
+Explore Services
+</a>
+</div>
+</section>
+
+<!-- Dashboard -->
+<div class="container mt-5">
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="dashboard-card bg-primary">
+<h2>120+</h2>
+<p>Total Bookings</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="dashboard-card bg-success">
+<h2>45+</h2>
+<p>Available Providers</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="dashboard-card bg-warning text-dark">
+<h2>18</h2>
+<p>Pending Requests</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- Search -->
+<section id="services" class="container mt-5">
+
+<h2 class="text-center mb-4">Our Services</h2>
+
+<input
+type="text"
+id="search"
+class="form-control mb-4"
+placeholder="Search Services..."
+>
+
+<div class="row g-4">
+
+<!-- Plumber -->
+<div class="col-md-4 service-card">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=800">
+<div class="card-body">
+<h5 class="card-title">Plumber</h5>
+<p>Expert plumbing services for homes and offices.</p>
+<button class="btn btn-primary"
+onclick="selectService('Plumber')">
+Book Now
+</button>
+</div>
+</div>
+</div>
+
+<!-- Electrical -->
+<div class="col-md-4 service-card">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800">
+<div class="card-body">
+<h5 class="card-title">Electrical</h5>
+<p>Professional electrical installation and repair.</p>
+<button class="btn btn-primary"
+onclick="selectService('Electrical')">
+Book Now
+</button>
+</div>
+</div>
+</div>
+
+<!-- Cleaning -->
+<div class="col-md-4 service-card">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800">
+<div class="card-body">
+<h5 class="card-title">Cleaning</h5>
+<p>Residential and commercial cleaning solutions.</p>
+<button class="btn btn-primary"
+onclick="selectService('Cleaning')">
+Book Now
+</button>
+</div>
+</div>
+</div>
+
+<!-- Carpenter -->
+<div class="col-md-4 service-card">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?q=80&w=800">
+<div class="card-body">
+<h5 class="card-title">Carpenter</h5>
+<p>Furniture repairs and custom woodwork services.</p>
+<button class="btn btn-primary"
+onclick="selectService('Carpenter')">
+Book Now
+</button>
+</div>
+</div>
+</div>
+
+<!-- Painting -->
+<div class="col-md-4 service-card">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=800">
+<div class="card-body">
+<h5 class="card-title">Painting</h5>
+<p>Interior and exterior painting services.</p>
+<button class="btn btn-primary"
+onclick="selectService('Painting')">
+Book Now
+</button>
+</div>
+</div>
+</div>
+
+<!-- Gardening -->
+<div class="col-md-4 service-card">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=800">
+<div class="card-body">
+<h5 class="card-title">Gardening</h5>
+<p>Garden maintenance and landscaping experts.</p>
+<button class="btn btn-primary"
+onclick="selectService('Gardening')">
+Book Now
+</button>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Booking Form -->
+<div class="container mt-5" id="bookingSection">
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+<h4>Book Your Service</h4>
+</div>
+
+<div class="card-body">
+
+<form id="bookingForm">
+
+<div class="mb-3">
+<label class="form-label">Selected Service</label>
+<input
+type="text"
+id="serviceName"
+class="form-control"
+readonly>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Full Name</label>
+<input type="text" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Phone Number</label>
+<input type="tel" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Address</label>
+<textarea class="form-control" rows="3"></textarea>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Booking Date</label>
+<input type="date" class="form-control" required>
+</div>
+
+<button class="btn btn-success">
+Confirm Booking
+</button>
+
+</form>
+
+</div>
+</div>
+</div>
+
+<!-- Providers -->
+<div class="container mt-5">
+
+<h2 class="mb-4">Available Service Providers</h2>
+
+<div class="table-responsive">
+<table class="table table-striped table-bordered">
+
+<thead class="table-dark">
+<tr>
+<th>Name</th>
+<th>Service</th>
+<th>Experience</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Rahul Kumar</td>
+<td>Plumber</td>
+<td>5 Years</td>
+<td><span class="badge bg-success">Available</span></td>
+</tr>
+
+<tr>
+<td>Amit Sharma</td>
+<td>Electrical</td>
+<td>7 Years</td>
+<td><span class="badge bg-success">Available</span></td>
+</tr>
+
+<tr>
+<td>Vikas Singh</td>
+<td>Cleaning</td>
+<td>4 Years</td>
+<td><span class="badge bg-danger">Busy</span></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+<h5>Mall & Home Utility Services</h5>
+<p>Professional Home Solutions At Your Doorstep</p>
+<p class="mb-0">© 2026 All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="App.js"></script>
+
+</body>
+</html>

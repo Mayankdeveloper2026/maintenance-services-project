@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="dashboard/dashboard.css">
+<title>Home & Building Services Dashboard</title>
+
+<!-- Bootstrap + Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="index.html">
+<i class="bi bi-buildings"></i>
+Home & Building Services
+</a>
+
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+Home
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="booking.html">
+Booking
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="dashboard.html">
+Dashboard
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="providers.html">
+Providers
+</a>
+</li>
+
+</ul>
+
+<div class="text-white ms-lg-4">
+<i class="bi bi-person-circle"></i>
+Welcome Admin
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center">
+    <div class="container">
+        <h1 class="fw-bold">
+            Home & Building Maintenance Dashboard
+        </h1>
+        <p class="lead">
+            Manage service requests, maintenance jobs and building operations.
+        </p>
+    </div>
+    <div class="container mt-4">
+
+<div class="d-flex justify-content-center gap-3 flex-wrap">
+
+<a href="index.html" class="btn btn-outline-dark">
+<i class="bi bi-house"></i>
+Home
+</a>
+
+<a href="booking.html" class="btn btn-outline-primary">
+<i class="bi bi-calendar-check"></i>
+Booking
+</a>
+
+<a href="providers.html" class="btn btn-outline-success">
+<i class="bi bi-people-fill"></i>
+Providers
+</a>
+
+</div>
+
+</div>
+</section>
+
+<div class="container my-5">
+
+    <!-- SERVICE GALLERY -->
+    <h3 class="mb-4">
+        <i class="bi bi-grid"></i> Available Services
+    </h3>
+
+    <div class="row g-4 mb-5">
+
+        <div class="col-md-3">
+            <div class="card service-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600" alt="">
+                <div class="card-body text-center">
+                    <i class="bi bi-lightning-charge fs-2 text-warning"></i>
+                    <h5>Electrical</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card service-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600" alt="">
+                <div class="card-body text-center">
+                    <i class="bi bi-wrench-adjustable fs-2 text-primary"></i>
+                    <h5>Plumbing</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card service-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600" alt="">
+                <div class="card-body text-center">
+                    <i class="bi bi-house-check fs-2 text-success"></i>
+                    <h5>Cleaning</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card service-card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="">
+                <div class="card-body text-center">
+                    <i class="bi bi-building fs-2 text-danger"></i>
+                    <h5>Building Maintenance</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- STATS -->
+    <div id="stats" class="row g-4 mb-5"></div>
+
+    <!-- SEARCH -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search service requests..."
+            >
+        </div>
+
+        <div class="col-md-4">
+            <select id="statusFilter" class="form-select">
+                <option value="all">All Status</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-container">
+
+        <h4 class="mb-3">
+            <i class="bi bi-list-task"></i>
+            Service Requests
+        </h4>
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody"></tbody>
+
+            </table>
+        </div>
+
+    </div>
+    <div class="text-center mt-5">
+
+<a href="providers.html"
+class="btn btn-success btn-lg">
+
+<i class="bi bi-people-fill"></i>
+View Service Providers
+
+</a>
+
+</div>
+
+</div>
+
+<footer class="footer text-center">
+    <p class="mb-0">
+        © 2025 ProviderHub. All Rights Reserved.
+    </p>
+</footer>
+
+
+
+<script src="dashboard/Dashboard.js"></script>
+
+</body>
+</html>
